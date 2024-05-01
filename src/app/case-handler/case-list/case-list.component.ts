@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { single } from 'rxjs';
 
 @Component({
   selector: 'app-case-list',
@@ -7,4 +8,18 @@ import { Component } from '@angular/core';
 })
 export class CaseListComponent {
 
+  viewSearchInput = signal<boolean>(false)
+  searchValue = signal<string>('');
+  
+  addNewRecord() {
+    console.log('new record')
+  }
+
+  openSortDialog() {
+    console.log(' open sort dialog')
+  }
+
+  openFilterDialog() {
+    console.log(' open sort dialog')
+  }
 }
