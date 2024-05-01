@@ -1,0 +1,44 @@
+:host {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.material-symbols-outlined {
+    line-height: 1.8;
+}
+
+.logo-size {
+    width: 70px;
+    height: 70px;
+}
+
+.nav-size {
+    width: 70px;
+}
+
+.active {
+    background-color: #e1edf7;
+
+    .material-symbols-outlined {
+        color: #1d8ff2;
+    }
+    p {
+        color: #1d8ff2;
+    }
+}
+
+.unactive {
+    .material-symbols-outlined {
+        color: grey;
+    }
+    p {
+        color: grey;
+    }
+}
+
+.fa-wand-sparkles:before {
+    font-size: 1.6rem;
+    color: grey;
+
+}
