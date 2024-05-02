@@ -62,7 +62,33 @@
             <!-- caseID Column -->
             <ng-container matColumnDef="caseID">
                 <th mat-header-cell *matHeaderCellDef>Case ID</th>
-                <td mat-cell *matCellDef="let element">{{element.position}}</td>
+                <td mat-cell *matCellDef="let element">
+                    <div>
+                        <p class="m-0 fw-bold"> {{element.position}}</p>
+                        <p class="m-0">Created</p>
+                    </div>
+                </td>
+            </ng-container>
+
+            <!-- customer Column -->
+            <ng-container matColumnDef="customer">
+                <th mat-header-cell *matHeaderCellDef>Customer</th>
+                <td mat-cell *matCellDef="let element">
+                    <div>
+                        <p class="m-0 fw-bold">{{element.position}}</p>
+                        <div class="d-flex align-items-center">
+                            <span class="d-flex align-items-center me-2">
+                                <mat-icon>mail</mat-icon>
+                                Mail
+                            </span>
+                            |
+                            <span class="ms-2 d-flex align-items-center">
+                                <mat-icon>call</mat-icon>
+                                1254687123
+                            </span>
+                        </div>
+                    </div>
+                </td>
             </ng-container>
 
             <!-- Share App Via Column -->
@@ -86,7 +112,7 @@
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
-        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" 
             aria-label="Select page of periodic elements">
         </mat-paginator>
     </div>

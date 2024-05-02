@@ -3,8 +3,16 @@
     flex-direction: column;
 }
 
-:host:ng-deep {
+:host::ng-deep {
     .mat-mdc-paginator-container {
         justify-content: space-between !important;
     }
+    .mat-mdc-header-row {
+        background-color: #f8f9fa !important;
+
+    }
+}
+
+.mat-column-select{
+    width: 0%;
 }

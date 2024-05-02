@@ -3,6 +3,8 @@ import { MatTableDataSource } from "@angular/material/table";
 import { MatPaginator } from '@angular/material/paginator';
 
 import { SelectionModel } from "@angular/cdk/collections";
+import { CustomPaginator } from 'src/app/shared/customlabelpaginator';
+import { MatPaginatorIntl } from '@angular/material/paginator';
 
 
 export interface PeriodicElement {
@@ -28,7 +30,10 @@ const ELEMENT_DATA: PeriodicElement[] = [
 @Component({
   selector: 'app-case-list',
   templateUrl: './case-list.component.html',
-  styleUrls: ['./case-list.component.scss']
+  styleUrls: ['./case-list.component.scss'],
+  providers: [
+    { provide: MatPaginatorIntl, useValue: CustomPaginator() }
+  ]
 })
 export class CaseListComponent {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -38,6 +43,7 @@ export class CaseListComponent {
   displayedColumns: string[] = [
     "select",
     "caseID",
+    "customer",
     "shareAppVia",
     "joinWith",
     "symbol"
