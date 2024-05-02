@@ -1,7 +1,7 @@
 <!-- header -->
 <app-header></app-header>
 <!-- list container -->
-<div>
+<div class="h-100 d-flex flex-column">
     <!-- Options -->
     <div class="py-4 px-3 d-flex justify-content-between align-items-center">
         <div>
@@ -43,7 +43,7 @@
         </div>
     </div>
     <!-- table -->
-    <div class="px-3">
+    <div class="px-3 flex-grow-1">
         <table mat-table [dataSource]="dataSource" class="">
             <!-- Checkbox Column -->
             <ng-container matColumnDef="select">
