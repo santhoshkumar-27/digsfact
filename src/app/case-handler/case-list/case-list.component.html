@@ -42,4 +42,52 @@
             </div>
         </div>
     </div>
+    <!-- table -->
+    <div class="px-3">
+        <table mat-table [dataSource]="dataSource" class="">
+            <!-- Checkbox Column -->
+            <ng-container matColumnDef="select">
+                <th mat-header-cell *matHeaderCellDef>
+                    <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="selection.hasValue()"
+                        [indeterminate]="selection.hasValue() && !isAllSelected()">
+                    </mat-checkbox>
+                </th>
+                <td mat-cell *matCellDef="let row">
+                    <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
+                        [checked]="selection.isSelected(row)">
+                    </mat-checkbox>
+                </td>
+            </ng-container>
+
+            <!-- caseID Column -->
+            <ng-container matColumnDef="caseID">
+                <th mat-header-cell *matHeaderCellDef>Case ID</th>
+                <td mat-cell *matCellDef="let element">{{element.position}}</td>
+            </ng-container>
+
+            <!-- Share App Via Column -->
+            <ng-container matColumnDef="shareAppVia">
+                <th mat-header-cell *matHeaderCellDef>Share App Via</th>
+                <td mat-cell *matCellDef="let element">{{element.name}}</td>
+            </ng-container>
+
+            <!-- Join With Column -->
+            <ng-container matColumnDef="joinWith">
+                <th mat-header-cell *matHeaderCellDef>Join With</th>
+                <td mat-cell *matCellDef="let element">{{element.weight}}</td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="symbol">
+                <th mat-header-cell *matHeaderCellDef></th>
+                <td mat-cell *matCellDef="let element">{{element.symbol}}</td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons
+            aria-label="Select page of periodic elements">
+        </mat-paginator>
+    </div>
 </div>
