@@ -1,4 +1,4 @@
-import { Component, ViewChild, signal } from '@angular/core';
+import { Component, ViewChild, inject, signal } from '@angular/core';
 import { MatTableDataSource } from "@angular/material/table";
 import { MatPaginator } from '@angular/material/paginator';
 
@@ -6,6 +6,7 @@ import { SelectionModel } from "@angular/cdk/collections";
 import { CustomPaginator } from 'src/app/shared/customlabelpaginator';
 import { MatPaginatorIntl } from '@angular/material/paginator';
 import { CaseList } from 'src/app/shared/interface';
+import { CaseService } from 'src/app/shared/service/case.service';
 
 @Component({
   selector: 'app-case-list',
@@ -17,7 +18,7 @@ import { CaseList } from 'src/app/shared/interface';
 })
 export class CaseListComponent {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-
+  caseService = inject(CaseService)
   viewSearchInput = signal<boolean>(false)
   searchValue = signal<string>('');
   displayedColumns: string[] = [
@@ -49,7 +50,18 @@ export class CaseListComponent {
         : this.dataSource.data.forEach(row => this.selection.select(row));
     }
   }
+  ngOnInit() {
+    this.getList()
+  }
+  getList() {
+    this.caseService.getCaseList().subscribe({
+      next: (value) => {
+        console.log('value', value)
+        this.dataSource = new MatTableDataSource<CaseList>(value.list);
 
+      }
+    })
+  }
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
   }
