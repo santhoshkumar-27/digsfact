@@ -1,0 +1,13 @@
+{
+    "count": 5,
+    "list": [
+        {
+            "customerName": "test1",
+            "customerID": 1,
+            "customerEmail": "test1@yopmail.com",
+            "customerPhone": 5698784512,
+            "caseID": "asdf-asdf-2asdf-asdf-adsf",
+            "createdAt": 1714701152583
+        }
+    ]
+}
