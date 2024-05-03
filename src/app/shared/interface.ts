@@ -6,3 +6,9 @@ export interface CaseList {
     caseID: string;
     createdAt: number;
 }
+
+
+export interface CaseDataResponse {
+    count: number
+    list: CaseList[]
+}
