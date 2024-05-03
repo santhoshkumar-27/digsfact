@@ -64,8 +64,8 @@
                 <th mat-header-cell *matHeaderCellDef>Case ID</th>
                 <td mat-cell *matCellDef="let element">
                     <div>
-                        <p class="m-0 fw-bold"> {{element.position}}</p>
-                        <p class="m-0">Created</p>
+                        <p class="m-0 fw-bold"> {{element.caseID}}</p>
+                        <p class="m-0">Created: {{element.createdAt}}</p>
                     </div>
                 </td>
             </ng-container>
@@ -75,17 +75,16 @@
                 <th mat-header-cell *matHeaderCellDef>Customer</th>
                 <td mat-cell *matCellDef="let element">
                     <div>
-                        <p class="m-0 fw-bold">{{element.position}}</p>
+                        <p class="m-0 fw-bold">{{element.customerName}}</p>
                         <div class="d-flex align-items-center">
                             <span class="d-flex align-items-center me-2">
                                 <mat-icon>mail</mat-icon>
-                                Mail
-                            </span>
+                                {{element.customerEmail}} </span>
                             |
                             <span class="ms-2 d-flex align-items-center">
                                 <mat-icon>call</mat-icon>
-                                1254687123
-                            </span>
+                                {{element.customerPhone}} </span>
+
                         </div>
                     </div>
                 </td>
@@ -112,20 +111,19 @@
             <!-- Join With Column -->
             <ng-container matColumnDef="joinWith">
                 <th mat-header-cell *matHeaderCellDef>Join With</th>
-                <td mat-cell *matCellDef="let element">{{element.weight}}</td>
+                <td mat-cell *matCellDef="let element"></td>
             </ng-container>
 
             <!-- Symbol Column -->
             <ng-container matColumnDef="symbol">
                 <th mat-header-cell *matHeaderCellDef></th>
-                <td mat-cell *matCellDef="let element">{{element.symbol}}</td>
+                <td mat-cell *matCellDef="let element"></td>
             </ng-container>
 
             <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true;"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
-        <mat-paginator [pageSizeOptions]="[5, 10, 20]" 
-            aria-label="Select page of periodic elements">
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" aria-label="Select page of periodic elements">
         </mat-paginator>
     </div>
 </div>
