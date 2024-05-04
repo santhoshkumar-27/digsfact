@@ -12,3 +12,16 @@ export interface CaseDataResponse {
     count: number
     list: CaseList[]
 }
+
+
+export type SortType = 1 | 2;
+// 1 for ascending
+// 2 for descending
+
+export interface Sort {
+    key: string;
+    displayName: string;
+    sortDirection: SortType;
+}
+
+export type SortLists = Sort[];

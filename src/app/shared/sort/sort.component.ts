@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, effect, signal } from '@angular/core';
+import { sortLists } from '../constant';
+import { Sort, SortLists } from '../interface';
 
 @Component({
   selector: 'app-sort',
@@ -6,15 +8,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./sort.component.scss']
 })
 export class SortComponent {
-  bold = false;
-  italic = false;
 
-  sizes = ['Small', 'Normal', 'Large'];
-  selectedSize: string | undefined = 'Normal';
+  sortList = signal<SortLists>(sortLists)
+  selectedSort = signal<Sort>(this.sortList()[0])
+
+  constructor() {
+    effect(() => {
+      console.log('selectedSort', this.selectedSort())
+    })
+  }
 
   reset() {
-    this.bold = false;
-    this.italic = false;
-    this.selectedSize = 'Normal';
+    this.selectedSort.set(this.sortList()[0]);
   }
 }

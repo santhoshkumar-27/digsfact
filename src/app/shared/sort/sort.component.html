@@ -6,14 +6,13 @@
     </span>
 </button>
 <ng-template #menu>
-    <div class="example-menu" cdkMenu>
-        <div cdkMenuGroup>
-            <button *ngFor="let size of sizes" cdkMenuItemRadio class="example-menu-item"
-                [cdkMenuItemChecked]="size === selectedSize" (cdkMenuItemTriggered)="selectedSize = size">
-                {{size}}
+    <div class="sort-menu" cdkMenu>
+        <div cdkMenuGroup class="sort-menu-group">
+            <button *ngFor="let sort of sortList()" cdkMenuItemRadio class="sort-menu-item"
+                [cdkMenuItemChecked]="selectedSort() === sort" (cdkMenuItemTriggered)="selectedSort.set(sort)">
+                {{sort.displayName}}
             </button>
         </div>
-        <hr />
-        <button cdkMenuItem class="example-menu-item" (cdkMenuItemTriggered)="reset()">Reset</button>
+        <button cdkMenuItem class="sort-menu-item" (cdkMenuItemTriggered)="reset()">Reset</button>
     </div>
 </ng-template>

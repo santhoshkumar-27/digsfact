@@ -1,4 +1,4 @@
-.example-menu {
+.sort-menu {
     display: inline-flex;
     flex-direction: column;
     min-width: 180px;
@@ -6,8 +6,12 @@
     background-color: rgb(255, 255, 255);
     padding: 6px 0;
 }
+.sort-menu-group {
+    max-height: 200px;
+    overflow-y: scroll;
+}
 
-.example-menu .example-menu-item {
+.sort-menu .sort-menu-item {
     width: 100%;
 }
 
@@ -16,8 +20,8 @@ hr {
     color: rgba(0, 0, 0, 0.12);
 }
 
-.example-menu-item,
-.example-standalone-item {
+.sort-menu-item,
+.sort-standalone-item {
     background-color: transparent;
     cursor: pointer;
     border: none;
@@ -33,30 +37,30 @@ hr {
     flex: 1;
 }
 
-.example-menu-item:hover {
+.sort-menu-item:hover {
     background-color: rgb(208, 208, 208);
 }
 
-.example-menu-item:active {
+.sort-menu-item:active {
     background-color: rgb(170, 170, 170);
 }
 
-.example-standalone-item {
+.sort-standalone-item {
     background-color: rgb(239, 239, 239);
 }
 
-.example-standalone-item:hover {
+.sort-standalone-item:hover {
     background-color: rgb(208, 208, 208);
 }
 
-.example-standalone-item[aria-expanded='true'] {
+.sort-standalone-item[aria-expanded='true'] {
     background-color: rgb(208, 208, 208);
 }
 
-.example-menu-item[role='menuitemradio'][aria-checked='true'] {
+.sort-menu-item[role='menuitemradio'][aria-checked='true'] {
     background-color: rgb(225, 225, 225);
 }
 
-.example-menu-item[role='menuitemcheckbox'][aria-checked='true'] {
+.sort-menu-item[role='menuitemcheckbox'][aria-checked='true'] {
     background-color: rgb(225, 225, 225);
 }
