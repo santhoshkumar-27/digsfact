@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 
 import { CaseHandlerRoutingModule } from './case-handler-routing.module';
 import { CaseListComponent } from './case-list/case-list.component';
@@ -24,6 +24,8 @@ import { materialModule } from '../shared/material';
     MatInputModule,
     ...materialModule,
     FormsModule,
+    NgOptimizedImage,
+
   ]
 })
 export class CaseHandlerModule { }

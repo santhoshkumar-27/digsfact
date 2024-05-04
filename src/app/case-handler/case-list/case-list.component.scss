@@ -8,12 +8,30 @@
     .mat-mdc-paginator-container {
         justify-content: space-between !important;
     }
+
     .mat-mdc-header-row {
         background-color: #f8f9fa !important;
-
+        font-weight: 900;
+        text-transform: uppercase;
     }
+    
 }
 
-.mat-column-select{
+.mat-column-select {
     width: 0%;
+}
+
+.mat-column-caseID {
+    width: 23%;
+}
+
+.mat-column-customer {
+    width: 25%;
+}
+
+.mat-column-shareAppVia {
+    width: 16%;
+}
+.mat-column-joinWith {
+    width: 16%;
 }
