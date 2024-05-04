@@ -1,0 +1,19 @@
+<button mat-stroked-button [cdkMenuTriggerFor]="menu">
+    <span class="d-flex justify-content-between align-items-center">
+        <mat-icon class="me-1">sort</mat-icon>
+        Sort
+        <mat-icon>arrow_drop_down</mat-icon>
+    </span>
+</button>
+<ng-template #menu>
+    <div class="example-menu" cdkMenu>
+        <div cdkMenuGroup>
+            <button *ngFor="let size of sizes" cdkMenuItemRadio class="example-menu-item"
+                [cdkMenuItemChecked]="size === selectedSize" (cdkMenuItemTriggered)="selectedSize = size">
+                {{size}}
+            </button>
+        </div>
+        <hr />
+        <button cdkMenuItem class="example-menu-item" (cdkMenuItemTriggered)="reset()">Reset</button>
+    </div>
+</ng-template>

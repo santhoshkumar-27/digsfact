@@ -5,6 +5,9 @@ import { NgOptimizedImage } from '@angular/common'
 import {MatIconModule} from '@angular/material/icon';
 import { UserProfileViewComponent } from './user-profile-view/user-profile-view.component';
 import { HeaderComponent } from './header/header.component';
+import { CdkModule } from './cdkmodule';
+import { SortComponent } from './sort/sort.component';
+import { materialModule } from './material';
 
 
 
@@ -12,17 +15,21 @@ import { HeaderComponent } from './header/header.component';
   declarations: [
     NavComponent,
     UserProfileViewComponent,
-    HeaderComponent
+    HeaderComponent,
+    SortComponent
   ],
   imports: [
     CommonModule,
     NgOptimizedImage,
-    MatIconModule
+    MatIconModule,
+    ...materialModule,
+    ...CdkModule,
   ],
   exports: [
     NavComponent,
     UserProfileViewComponent,
-    HeaderComponent
+    HeaderComponent,
+    SortComponent
   ]
 })
 export class SharedModule { }
