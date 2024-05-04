@@ -1,4 +1,4 @@
-import { Component, effect, signal } from '@angular/core';
+import { Component, EventEmitter, Output, effect, signal } from '@angular/core';
 import { sortLists } from '../constant';
 import { Sort, SortLists } from '../interface';
 
@@ -9,12 +9,14 @@ import { Sort, SortLists } from '../interface';
 })
 export class SortComponent {
 
+  @Output() sortEmitted = new EventEmitter<Sort>();
+  
   sortList = signal<SortLists>(sortLists)
   selectedSort = signal<Sort>(this.sortList()[0])
 
   constructor() {
     effect(() => {
-      console.log('selectedSort', this.selectedSort())
+      this.sortEmitted.emit(this.selectedSort())
     })
   }
 
