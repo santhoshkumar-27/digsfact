@@ -51,7 +51,6 @@ export class CaseListComponent {
     }
   }
   ngOnInit() {
-    this.getList()
   }
   getList() {
     this.caseService.getCaseList().subscribe({
@@ -64,9 +63,9 @@ export class CaseListComponent {
     })
   }
   ngAfterViewInit() {
+    this.getList()
   }
   isSomeSelected() {
-    console.log(this.selection.selected);
     return this.selection.selected.length > 0;
   }
   addNewRecord() {
