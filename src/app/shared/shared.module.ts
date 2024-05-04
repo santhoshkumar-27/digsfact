@@ -18,7 +18,7 @@ import { FilterComponent } from './filter/filter.component';
     UserProfileViewComponent,
     HeaderComponent,
     SortComponent,
-    FilterComponent
+    FilterComponent,
   ],
   imports: [
     CommonModule,
