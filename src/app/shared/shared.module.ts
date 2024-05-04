@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { CdkModule } from './cdkmodule';
 import { SortComponent } from './sort/sort.component';
 import { materialModule } from './material';
+import { FilterComponent } from './filter/filter.component';
 
 
 
@@ -16,7 +17,8 @@ import { materialModule } from './material';
     NavComponent,
     UserProfileViewComponent,
     HeaderComponent,
-    SortComponent
+    SortComponent,
+    FilterComponent
   ],
   imports: [
     CommonModule,

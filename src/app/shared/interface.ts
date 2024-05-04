@@ -27,4 +27,11 @@ export interface Sort {
 
 export type SortLists = Sort[];
 
+export interface FilterCase {
+    displayName: string;
+    caseProgress: caseProgress;
+}
+
+export type FilterCases = FilterCase[];
+
 export type caseProgress = 'Not Started' | 'In Progress' | 'Completed' | '';

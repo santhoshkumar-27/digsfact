@@ -1,4 +1,4 @@
-import { SortLists } from "./interface";
+import { FilterCases, SortLists } from "./interface";
 
 export const sortLists: SortLists = [
     {
@@ -40,7 +40,7 @@ export const sortLists: SortLists = [
         displayName: "createdAt (9-0)",
         key: "createdAt",
         sortDirection: 2
-    },{
+    }, {
         displayName: "caseID (A-Z)",
         key: "customercaseID",
         sortDirection: 1
@@ -50,4 +50,20 @@ export const sortLists: SortLists = [
         key: "caseID",
         sortDirection: 2
     },
-]
+];
+
+
+export const filterLists: FilterCases = [
+    {
+        caseProgress: 'Completed',
+        displayName: 'Completed'
+    },
+    {
+        caseProgress: 'In Progress',
+        displayName: 'In Progress'
+    },
+    {
+        caseProgress: 'Not Started',
+        displayName: 'Not Started'
+    }
+];
