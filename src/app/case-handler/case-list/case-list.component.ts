@@ -58,12 +58,12 @@ export class CaseListComponent {
       next: (value) => {
         console.log('value', value)
         this.dataSource = new MatTableDataSource<CaseList>(value.list);
+        this.dataSource.paginator = this.paginator;
 
       }
     })
   }
   ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
   }
   isSomeSelected() {
     console.log(this.selection.selected);

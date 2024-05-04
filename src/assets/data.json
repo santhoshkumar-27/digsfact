@@ -2,12 +2,84 @@
     "count": 5,
     "list": [
         {
-            "customerName": "test1",
+            "customerName": "John Doe",
             "customerID": 1,
-            "customerEmail": "test1@yopmail.com",
-            "customerPhone": 5698784512,
-            "caseID": "asdf-asdf-2asdf-asdf-adsf",
-            "createdAt": 1714701152583
+            "customerEmail": "johndoe@gmail.com",
+            "customerPhone": 2345678901,
+            "caseID": "7207-66288d4c8a8f39549f771aae",
+            "createdAt": 1714833952583
+        },
+        {
+            "customerName": "Alice Smith",
+            "customerID": 2,
+            "customerEmail": "alicesmith@yahoo.com",
+            "customerPhone": 3456789012,
+            "caseID": "3150-87219f3e8a8f31509f875bbd",
+            "createdAt": 1714833952583
+        },
+        {
+            "customerName": "Bob Johnson",
+            "customerID": 3,
+            "customerEmail": "bjohnson@hotmail.com",
+            "customerPhone": 4567890123,
+            "caseID": "9174-23871a5b4b4f91741b652aad",
+            "createdAt": 1714833952583
+        },
+        {
+            "customerName": "Emily Davis",
+            "customerID": 4,
+            "customerEmail": "emily.davis@example.com",
+            "customerPhone": 5678901234,
+            "caseID": "5328-13742b6d3e3f53289d4b7bbb",
+            "createdAt": 1714833952583
+        },
+        {
+            "customerName": "Michael Brown",
+            "customerID": 5,
+            "customerEmail": "mbrown@gmail.com",
+            "customerPhone": 6789012345,
+            "caseID": "2856-29481c6e7c7d28569763aabb",
+            "createdAt": 1714833952583
+        },
+        {
+            "customerName": "Olivia Wilson",
+            "customerID": 6,
+            "customerEmail": "olivia.wilson@example.com",
+            "customerPhone": 7890123456,
+            "caseID": "6482-97283d8f8e8g6482567c8ddd",
+            "createdAt": 1714833952583
+        },
+        {
+            "customerName": "Sophia Martinez",
+            "customerID": 7,
+            "customerEmail": "sophiam@example.com",
+            "customerPhone": 8901234567,
+            "caseID": "1239-57281e9f9f9a12396485eeee",
+            "createdAt": 1714833952583
+        },
+        {
+            "customerName": "William Taylor",
+            "customerID": 8,
+            "customerEmail": "will.taylor@example.com",
+            "customerPhone": 9012345678,
+            "caseID": "8753-74384f7g7g7b875399282ccc",
+            "createdAt": 1714833952583
+        },
+        {
+            "customerName": "Ava Anderson",
+            "customerID": 9,
+            "customerEmail": "a.anderson@example.com",
+            "customerPhone": 1234567890,
+            "caseID": "9624-8395a1b2c2d962405a6f0fff",
+            "createdAt": 1714833952583
+        },
+        {
+            "customerName": "James Lee",
+            "customerID": 10,
+            "customerEmail": "jlee@example.com",
+            "customerPhone": 2345678901,
+            "caseID": "4816-30496b8c8d8e48163376aaaa",
+            "createdAt": 1714833952583
         }
     ]
 }
