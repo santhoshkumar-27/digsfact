@@ -5,6 +5,7 @@ export interface CaseList {
     customerPhone: number;
     caseID: string;
     createdAt: number;
+    caseProgress: caseProgress
 }
 
 
@@ -25,3 +26,5 @@ export interface Sort {
 }
 
 export type SortLists = Sort[];
+
+export type caseProgress = 'Not Started' | 'In Progress' | 'Completed' | '';
