@@ -7,6 +7,7 @@ import { CustomPaginator } from 'src/app/shared/customlabelpaginator';
 import { MatPaginatorIntl } from '@angular/material/paginator';
 import { CaseList, FilterCase, Sort } from 'src/app/shared/interface';
 import { CaseService } from 'src/app/shared/service/case.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-case-list',
@@ -18,7 +19,8 @@ import { CaseService } from 'src/app/shared/service/case.service';
 })
 export class CaseListComponent {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-  caseService = inject(CaseService)
+  caseService = inject(CaseService);
+  route = inject(Router);
   viewSearchInput = signal<boolean>(false)
   searchValue = signal<string>('');
   displayedColumns: string[] = [
@@ -78,5 +80,9 @@ export class CaseListComponent {
 
   openFilterDialog(value: FilterCase) {
     console.log('value filter emitted', value)
+  }
+
+  navigateDetialCase(caseID: string) {
+    this.route.navigate(['mycases', 'case', caseID])
   }
 }

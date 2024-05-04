@@ -9,11 +9,13 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { materialModule } from '../shared/material';
+import { CaseViewComponent } from './case-view/case-view.component';
 
 
 @NgModule({
   declarations: [
-    CaseListComponent
+    CaseListComponent,
+    CaseViewComponent
   ],
   imports: [
     CommonModule,
