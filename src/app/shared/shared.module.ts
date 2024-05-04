@@ -31,7 +31,9 @@ import { FilterComponent } from './filter/filter.component';
     NavComponent,
     UserProfileViewComponent,
     HeaderComponent,
-    SortComponent
+    SortComponent,
+    FilterComponent
+
   ]
 })
 export class SharedModule { }

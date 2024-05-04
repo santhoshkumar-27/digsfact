@@ -17,13 +17,7 @@
                 </button>
             </div>
             <div class="me-3">
-                <button mat-stroked-button (click)="openFilterDialog()">
-                    <span class="d-flex justify-content-between align-items-center">
-                        <mat-icon class="me-1">filter_alt</mat-icon>
-                        Filter
-                        <mat-icon>arrow_drop_down</mat-icon>
-                    </span>
-                </button>
+                <app-filter (filterEmitted)="openFilterDialog($event)"></app-filter>
             </div>
             <div class="me-3">
                 <app-sort (sortEmitted)="openSortDialog($event)"></app-sort>

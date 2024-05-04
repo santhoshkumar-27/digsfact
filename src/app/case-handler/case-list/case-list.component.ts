@@ -5,7 +5,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { SelectionModel } from "@angular/cdk/collections";
 import { CustomPaginator } from 'src/app/shared/customlabelpaginator';
 import { MatPaginatorIntl } from '@angular/material/paginator';
-import { CaseList, Sort } from 'src/app/shared/interface';
+import { CaseList, FilterCase, Sort } from 'src/app/shared/interface';
 import { CaseService } from 'src/app/shared/service/case.service';
 
 @Component({
@@ -77,7 +77,7 @@ export class CaseListComponent {
     console.log('value sort emitted', value)
   }
 
-  openFilterDialog() {
-    console.log(' open sort dialog')
+  openFilterDialog(value: FilterCase) {
+    console.log('value filter emitted', value)
   }
 }
