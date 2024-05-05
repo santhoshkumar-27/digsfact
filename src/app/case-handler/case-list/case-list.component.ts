@@ -77,11 +77,11 @@ export class CaseListComponent {
     console.log('new record')
   }
 
-  openSortDialog(value: Sort) {
+  sortHandle(value: Sort) {
     console.log('value sort emitted', value)
   }
 
-  openFilterDialog(value: FilterCase) {
+  filterHandle(value: FilterCase) {
     console.log('value filter emitted', value)
   }
 

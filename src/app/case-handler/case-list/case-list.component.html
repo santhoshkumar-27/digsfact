@@ -17,10 +17,10 @@
                 </button>
             </div>
             <div class="me-3">
-                <app-filter (filterEmitted)="openFilterDialog($event)"></app-filter>
+                <app-filter (filterEmitted)="filterHandle($event)"></app-filter>
             </div>
             <div class="me-3">
-                <app-sort (sortEmitted)="openSortDialog($event)"></app-sort>
+                <app-sort (sortEmitted)="sortHandle($event)"></app-sort>
             </div>
             <div>
                 <button mat-flat-button color="primary" extended (click)="addNewRecord()">
