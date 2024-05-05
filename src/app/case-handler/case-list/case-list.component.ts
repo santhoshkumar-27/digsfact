@@ -8,6 +8,8 @@ import { MatPaginatorIntl } from '@angular/material/paginator';
 import { CaseList, FilterCase, Sort } from 'src/app/shared/interface';
 import { CaseService } from 'src/app/shared/service/case.service';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { PopUpComponent } from 'src/app/shared/pop-up/pop-up.component';
 
 @Component({
   selector: 'app-case-list',
@@ -21,6 +23,7 @@ export class CaseListComponent {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   caseService = inject(CaseService);
   route = inject(Router);
+  dialogService = inject(MatDialog)
   viewSearchInput = signal<boolean>(false)
   searchValue = signal<string>('');
   displayedColumns: string[] = [
@@ -84,5 +87,14 @@ export class CaseListComponent {
 
   navigateDetialCase(caseID: string) {
     this.route.navigate(['mycases', 'case', caseID])
+  }
+
+  openContact(title: string, value: CaseList) {
+    const dialogRef = this.dialogService.open(PopUpComponent, {
+      data: { title: title, customer: value },
+    })
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 }

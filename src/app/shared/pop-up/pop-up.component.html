@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>{{data.title}}</h2>
+<mat-dialog-content>
+    <p>
+        Customer Name: {{data.customer.customerName}}
+    </p>
+    <p>
+        Customer Email: {{data.customer.customerEmail}}
+    </p>
+    <p>
+        Customer Phone: {{data.customer.customerPhone}}
+    </p>
+</mat-dialog-content>
+<mat-dialog-actions class="d-flex justify-content-end">
+  <button mat-button cdkFocusInitial color="warn" (click)="onNoClick()">Close</button>
+</mat-dialog-actions>

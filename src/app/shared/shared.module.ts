@@ -9,6 +9,7 @@ import { CdkModule } from './cdkmodule';
 import { SortComponent } from './sort/sort.component';
 import { materialModule } from './material';
 import { FilterComponent } from './filter/filter.component';
+import { PopUpComponent } from './pop-up/pop-up.component';
 
 
 
@@ -19,6 +20,7 @@ import { FilterComponent } from './filter/filter.component';
     HeaderComponent,
     SortComponent,
     FilterComponent,
+    PopUpComponent,
   ],
   imports: [
     CommonModule,
