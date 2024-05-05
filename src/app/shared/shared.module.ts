@@ -11,6 +11,7 @@ import { materialModule } from './material';
 import { FilterComponent } from './filter/filter.component';
 import { PopUpComponent } from './pop-up/pop-up.component';
 import { NotesComponent } from './notes/notes.component';
+import { InfoUserComponent } from './info-user/info-user.component';
 
 
 
@@ -23,6 +24,7 @@ import { NotesComponent } from './notes/notes.component';
     FilterComponent,
     PopUpComponent,
     NotesComponent,
+    InfoUserComponent,
   ],
   imports: [
     CommonModule,
@@ -37,7 +39,8 @@ import { NotesComponent } from './notes/notes.component';
     HeaderComponent,
     SortComponent,
     FilterComponent,
-    NotesComponent
+    NotesComponent,
+    InfoUserComponent
   ]
 })
 export class SharedModule { }
