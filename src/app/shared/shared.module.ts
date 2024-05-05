@@ -10,6 +10,7 @@ import { SortComponent } from './sort/sort.component';
 import { materialModule } from './material';
 import { FilterComponent } from './filter/filter.component';
 import { PopUpComponent } from './pop-up/pop-up.component';
+import { NotesComponent } from './notes/notes.component';
 
 
 
@@ -21,6 +22,7 @@ import { PopUpComponent } from './pop-up/pop-up.component';
     SortComponent,
     FilterComponent,
     PopUpComponent,
+    NotesComponent,
   ],
   imports: [
     CommonModule,
@@ -34,8 +36,8 @@ import { PopUpComponent } from './pop-up/pop-up.component';
     UserProfileViewComponent,
     HeaderComponent,
     SortComponent,
-    FilterComponent
-
+    FilterComponent,
+    NotesComponent
   ]
 })
 export class SharedModule { }
