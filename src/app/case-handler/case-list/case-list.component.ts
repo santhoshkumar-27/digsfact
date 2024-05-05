@@ -55,8 +55,7 @@ export class CaseListComponent {
         : this.dataSource.data.forEach(row => this.selection.select(row));
     }
   }
-  ngOnInit() {
-  }
+
   getList() {
     this.caseService.getCaseList().subscribe({
       next: (value) => {
