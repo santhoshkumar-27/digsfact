@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,7 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./case-view.component.scss']
 })
 export class CaseViewComponent {
-  router = inject(Router)
+  router = inject(Router);
+  measures = signal<string[]>(['CM', 'Inches', 'Feet'])
+  selectedMeasure = signal<string>(this.measures()[0])
   goBackListPage() {
     this.router.navigate(['mycases', 'case-list'])
   }
