@@ -20,6 +20,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatTableModule } from '@angular/material/table';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 export const materialModule = [
     MatAutocompleteModule,
@@ -44,4 +45,5 @@ export const materialModule = [
     MatProgressSpinnerModule,
     MatRadioModule,
     MatTableModule,
+    MatSlideToggleModule,
 ]

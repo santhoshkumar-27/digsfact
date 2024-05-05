@@ -1,0 +1,11 @@
+:host ::ng-deep {
+    .mat-mdc-slide-toggle {
+        .mdc-form-field {
+            flex-direction: row-reverse !important;
+        }
+        .mdc-label {
+            font-weight: 900;
+            margin-right: 10px;
+        }
+    }
+}
