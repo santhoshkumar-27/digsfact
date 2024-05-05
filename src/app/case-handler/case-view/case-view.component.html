@@ -15,8 +15,8 @@
             <mat-slide-toggle color="primary">
                 Overlay
             </mat-slide-toggle>
-            <button mat-button color="primary">Reset</button>
-            <button mat-flat-button color="primary">Save</button>
+            <button mat-button color="primary" (click)="resetHandle()">Reset</button>
+            <button mat-flat-button color="primary" (click)="saveHandle()">Save</button>
         </div>
     </div>
 </app-header>
@@ -36,38 +36,38 @@
                 </mat-option>
             </mat-select>
         </span>
-        <button mat-button>
+        <button mat-button (click)="removePinsHandle()">
             <mat-icon class="me-1">edit_location</mat-icon>
             Remove Pins
         </button>
     </div>
     <div class="d-flex align-items-center">
-        <button mat-button class="d-flex align-items-center ">
+        <button mat-button class="d-flex align-items-center" (click)="measuresHandle()">
             <span class="material-symbols-outlined pe-2">
                 fit_page
             </span> Measure
         </button>
-        <button mat-button class="d-flex align-items-center">
+        <button mat-button class="d-flex align-items-center" (click)="expandPlansHandle()">
             <span class="material-symbols-outlined pe-2">
                 expand_content
             </span>
             Expand plans
         </button>
     </div>
-    <div class="d-flex align-items-center">
+    <div class="d-flex align-items-center" (click)="magnifyHandle()">
         <button mat-button class="d-flex align-items-center ">
             <span class="material-symbols-outlined pe-2">
                 zoom_in
             </span>
             Magnifiy
         </button>
-        <button mat-button class="d-flex align-items-center ">
+        <button mat-button class="d-flex align-items-center " (click)="supportHandle()">
             <span class="material-symbols-outlined pe-2">
                 drafts
             </span>
             Support
         </button>
-        <button mat-button class="d-flex align-items-center ">
+        <button mat-button class="d-flex align-items-center " (click)="frequentQuestions()">
             <span class="material-symbols-outlined pe-2">
                 Help
             </span>

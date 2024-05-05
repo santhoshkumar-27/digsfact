@@ -24,4 +24,32 @@ export class CaseViewComponent {
       console.log('The dialog was closed');
     });
   }
+  removePinsHandle() {
+
+  }
+
+  measuresHandle() {
+
+  }
+  expandPlansHandle() {
+
+  }
+  magnifyHandle() {
+
+  }
+
+  supportHandle() {
+
+  }
+
+  frequentQuestions() {
+
+  }
+  resetHandle() {
+
+  }
+
+  saveHandle() {
+    
+  }
 }
