@@ -10,8 +10,9 @@ import { CaseService } from 'src/app/shared/service/case.service';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { PopUpComponent } from 'src/app/shared/pop-up/pop-up.component';
-import { interval } from 'rxjs';
-import { bufferTime } from 'rxjs/operators';
+import { fromEvent, interval } from 'rxjs';
+import { bufferTime, debounceTime, throttleTime } from 'rxjs/operators';
+
 @Component({
   selector: 'app-case-list',
   templateUrl: './case-list.component.html',
@@ -38,13 +39,16 @@ export class CaseListComponent {
   dataSource = new MatTableDataSource<CaseList>([]);
   selection = new SelectionModel<CaseList>(true, []);
   constructor() {
-    // interval(100).pipe(
-    //   bufferTime(1000)
-    // ).subscribe(
-    //   values => console.log(values),
-    //   err => console.error(err),
-    //   () => console.log('Complete')
-    // );
+    fromEvent(document, 'keyup').pipe(
+      // bufferTime(1000),
+      // throttleTime(2000)
+      debounceTime(1000)
+
+    ).subscribe(
+      values => console.log(values),
+      err => console.error(err),
+      () => console.log('Complete')
+    );
   }
   /** Whether the number of selected elements matches the total number of rows. */
   isAllSelected() {
